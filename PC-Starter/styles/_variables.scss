@@ -1,0 +1,28 @@
+// Contains SCSS Variables for all Stylesheets
+
+// Responsive Breakpoints
+$portrait: "(min-width:550px)"; // Portrait and Above
+$tablet: "(min-width:800px)"; // Tablet Landscape and Above
+$desktop: "(min-width:1024px)"; // Desktop and Above
+$widescreen: "(min-width:1250px)"; // Large Devices
+
+// Fonts Available: Karla - Variable 200-800
+$headlinestack: 700 1rem/1.65 'Karla', sans-serif;
+$primarystack: 400 1rem/1.65 'Karla', sans-serif;
+
+// Color Scheme
+$black: #282828 !default;
+$white: #FFFFFF !default;
+$offwhite: #DDDDDD !default;
+$grey: #565656 !default;
+$primaryaccent: #00A8f0 !default; // Blue
+
+// Animations & Transitions
+@mixin transition { -moz-transition: all 0.5s ease-in 0s; -webkit-transition: all 0.5s ease-in 0s; -o-transition: all 0.5s ease-in 0s; transition: all 0.5s ease-in 0s; }
+@mixin transition-fast { -moz-transition: all 0.2s ease-in 0s; -webkit-transition: all 0.2s ease-in 0s; -o-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s; }
+@mixin animation { animation-play-state: paused; animation-delay: calc(var(--scroll) * -1s); animation-iteration-count: 1; animation-fill-mode: both; }
+
+// Default Components
+%button { display:inline-block; margin:0 0 8px; padding:12px 18px !important; text-transform:uppercase; letter-spacing: 0.1em; text-align: center; color:$white; background-image:linear-gradient(120deg,$primaryaccent 100%,$primaryaccent 0%); background-repeat:no-repeat; background-size:100% 100%; background-position:100% 0; border:2px solid $primaryaccent !important; @include transition; }
+%buttonhover { color:$primaryaccent; background-size:0rem 100%; }
+%input { width:100%; margin-bottom:20px; padding:16px; border:1px solid $grey; box-sizing: border-box; background:$white; color:$black; @include transition; }
